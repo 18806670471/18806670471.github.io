@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表白墙</title>
+	<meta name="description" content="漂亮">
+	<meta name="keywords" content="表白">
+	<style type="text/css">
+	 	.heart{
+			position: relative; 
+			width: 10px;
+			height: 16px;
+			/* border:2px solid blue;
+		 */
+		}
+
+	/* 	.heart div{
+			width: 10px;
+			height: 16px;
+			background: red;
+			border-radius: 10px 10px 0 0;
+		}
+
+		.left{
+			transform:rotate(-45deg);
+		}
+
+		.right{
+			transform:translateY(-16px) translateX(4px) rotate(45deg);
+		} */ 
+		.heart:before,.heart:after{
+			content: "";
+			position: absolute;
+			left: 0;
+			top:0;
+			width: 10px;
+			height: 16px;
+			background: red;
+			border-radius: 10px 10px 0 0;
+			transform:rotate(-45deg);
+
+		}
+
+		.heart:after{
+			left: 4px;
+			transform:rotate(45deg);
+			
+		}
+	</style>
+</head>
+<body>
+ <div class="heart">
+		 <div class="left"></div>
+		<div class="right"></div> 
+ </div> 
+	
+  <script src="snowfall.jquery.js"></script>
+<script>
+    $(document).snowfall({
+        falkeCount:50//设置爱心数目为50个
+    })
+</script>
+</body>
+</html>
